@@ -21,6 +21,7 @@
 		C15D41142BB21B150012831B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D41132BB21B150012831B /* ContentView.swift */; };
 		C15D41162BB21B170012831B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15D41152BB21B170012831B /* Assets.xcassets */; };
 		C15D41192BB21B170012831B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15D41182BB21B170012831B /* Preview Assets.xcassets */; };
+		C162400A2BB5EEE000A6E29E /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16240092BB5EEE000A6E29E /* Double+.swift */; };
 		C1DD51F52BB4DBD40059BF28 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DD51F42BB4DBD40059BF28 /* StoreType.swift */; };
 		C1DD51F72BB4DC2C0059BF28 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DD51F62BB4DC2C0059BF28 /* ProductType.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		C15D41132BB21B150012831B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C15D41152BB21B170012831B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15D41182BB21B170012831B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C16240092BB5EEE000A6E29E /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		C1DD51F42BB4DBD40059BF28 /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
 		C1DD51F62BB4DC2C0059BF28 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 		C15D41102BB21B150012831B /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				C16240082BB5EECB00A6E29E /* Extension */,
 				C1332FFC2BB3013D00529F0F /* App */,
 				C13330022BB314C800529F0F /* Model */,
 				C1332FFB2BB3012400529F0F /* NavigationBar */,
@@ -149,6 +152,14 @@
 				C15D41182BB21B170012831B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C16240082BB5EECB00A6E29E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C16240092BB5EEE000A6E29E /* Double+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				C1DD51F72BB4DC2C0059BF28 /* ProductType.swift in Sources */,
 				C133300B2BB37AE000529F0F /* CarouselItemView.swift in Sources */,
 				C15D41142BB21B150012831B /* ContentView.swift in Sources */,
+				C162400A2BB5EEE000A6E29E /* Double+.swift in Sources */,
 				C13330062BB315BF00529F0F /* DataSourceMock.swift in Sources */,
 				C13330122BB3838600529F0F /* StoresContainerView.swift in Sources */,
 				C13330082BB31AF000529F0F /* OrderTypeView.swift in Sources */,
