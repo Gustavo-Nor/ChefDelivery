@@ -11,10 +11,12 @@ struct StoresContainerView: View {
     
     let title = "Lojas"
     @State private var ratingFilter = 0
+    @State private var minDistance: Double = 0
+    @State private var maxDistance: Double = 100
     
     var filteredStores: [StoreType] {
         return storesMock.filter { store in
-            store.stars >= ratingFilter
+            store.stars >= ratingFilter && (store.distance >= minDistance && store.distance <= maxDistance)
         }
     }
     
@@ -27,7 +29,7 @@ struct StoresContainerView: View {
                 
                 Spacer()
                 
-                Menu("Filtrar") {
+                Menu("Estrelas") {
                     
                     Button {
                         ratingFilter = 0
@@ -49,6 +51,29 @@ struct StoresContainerView: View {
                             }
                         }
 
+                    }
+                }
+                .foregroundColor(.black)
+                
+                
+                Menu("Distância") {
+                    
+                    Button {
+                        minDistance = 0
+                        maxDistance = 100
+                    } label: {
+                        Text("Limpar filtro")
+                    }
+
+                    Divider()
+                    
+                    ForEach(Array(stride(from: 0, to: 20, by: 5)), id: \.self) { distance in
+                        Button {
+                            minDistance = distance
+                            maxDistance = distance + 5
+                        } label: {
+                            Text("De \(String(format: "%.0f", distance)) até \(String(format: "%.0f", distance + 5)) km")
+                        }
                     }
                 }
                 .foregroundColor(.black)
