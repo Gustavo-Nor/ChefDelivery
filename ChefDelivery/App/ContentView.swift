@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    //MARK: - Attributes
+    private var service = HomeService()
+    
+    //MARK: - View
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -22,6 +28,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            service.fetchData()
         }
     }
 }

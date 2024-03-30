@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StoreType: Identifiable {
+struct StoreType: Identifiable, Decodable {
     let id: Int
     let name: String
     let distance: Double
@@ -16,4 +16,10 @@ struct StoreType: Identifiable {
     let location: String
     let stars: Int
     let products: [ProductType]
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, name, location, stars, products, distance
+        case logoImage = "logo_image"
+        case headerImage = "header_image"
+    }
 }
