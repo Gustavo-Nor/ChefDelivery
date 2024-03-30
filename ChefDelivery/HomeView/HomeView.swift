@@ -89,7 +89,7 @@ struct HomeView: View {
                         HStack {
                             Capsule()
                                 .fill(Color("ColorRed"))
-                                .frame(width: buttonOffset + buttonHeight)
+                                .frame(width: buttonOffset + buttonHeight - 8)
                             
                             Spacer()
                         }

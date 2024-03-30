@@ -14,8 +14,10 @@ struct StoresContainerView: View {
     @State private var minDistance: Double = 0
     @State private var maxDistance: Double = 100
     
+    var stores: [StoreType]
+    
     var filteredStores: [StoreType] {
-        return storesMock.filter { store in
+        return stores.filter { store in
             store.stars >= ratingFilter && (store.distance >= minDistance && store.distance <= maxDistance)
         }
     }
@@ -106,5 +108,5 @@ struct StoresContainerView: View {
 }
 
 #Preview {
-    StoresContainerView()
+    StoresContainerView(stores: storesMock)
 }
