@@ -60,6 +60,12 @@ struct ContentView: View {
             self.isLoading = false
         }
     }
+    
+    func getStoresWithAlamofire() {
+        service.fetchDataWithAlamofire { stores, error in
+            print(stores)
+        }
+    }
 }
 
 #Preview {
